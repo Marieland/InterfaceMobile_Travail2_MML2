@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script type="module" src="./assets/js/main.js" defer></script>
+  <script type="module" src="./assets/js/dialog.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil</title>
+</head>
+
+<body> 
+                        <!--banniere avec la balise picture-->
+                        <!--section avantages: 3 icones, 3 avantages, 3colonnes-->
+                        <!--section produits vedettes : 4 produits, 4 colonnes-->
+                        <!--! header:logo, menu, panier latéral-->
+  <header class="bg-white">
+
+    <div class="banner bg-pink-400 flex flex-row place-content-center font-heading font-semibold p-3 md:text-lg">
+      <p>Livraison gratuite à partir de 75$ dans la région de Québec</p>
+    </div>
+
+    <div class="flex flex-row gap-3 justify-evenly bg-teal-300">
+
+      <div class="header_logo p-3">
+        <img class="logo  w-[36px] h-[36px] lg:w-[72px] lg:h-[72px]" src="./assets/images/logo/marieland.png"
+          alt="Logo">
+      </div>
+
+      <nav class="flex items-center">
+        <ul class="hidden md:flex flex-row gap-3 p-3 justify-evenly">
+          <li class=" hover:underline">
+            <a href="./index.html">Accueil</a>
+          </li>
+          <li class=" hover:underline">
+            <a href="./product.html">Produits</a>
+          </li>
+          <li class=" hover:underline">
+            <a href="./contact.html">Nous contacter</a>
+          </li>
+          <li class=" hover:underline">
+            <a href="./about.html">À propos</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="flex flex-row items-center justify-start">
+
+        <button class="btn__menu p-3">
+          <img data-dialog="#menu-mobile" src="./assets/images/icons/menu.svg" alt="menu-mobile" class="md:hidden"></img>
+        </button>
+      </div>
+
+      <div class="articles_container flex flex-row items-center  gap-3">
+        <div class="w-full flex flex-row gap-3">
+          <img src="./assets/images/icons/search.svg" alt="search">
+          <input class="search border border-black bg-slate-300" type="text">
+        </div>
+      </div>
+                                            <!--! cart-->
+      <button>
+        <img class="items-end " src="./assets/images/icons/cart.svg" alt="cart">
+      </button>
+
+      <div id="cart" class="dialog">
+        <div class="flex flex-col gap-3 w-[350px] bg-grey-400 justify-self-end">Test</div>
+
+        <div class="cart_items"></div>
+        <div class="cart_total">$0.00</div>
+      </div>
+
+    </div>
+                                                                  <!--! mobile modal-->
+    <div id="menu-mobile"  class="dialog"  aria-role="dialog">
+      
+ 
+      <div class="bg-slate-200 justify-center flex flex-row text-sm w-1/2">
+        <nav>
+          <ul class="justify-evenly gap-3 flex flex-col items-center ">
+            <li class=" hover:bg-pink-300 w-[150px] text-center"> <a href="./index.html">Accueil</a></li>
+            <li class="hover:bg-pink-300 w-[150px] text-center" ><a href="./product.html">Produits</a></li>
+            <li class="hover:bg-pink-300 w-[150px] text-center"><a href="./contact.html">Nous contacter</a></li>
+            <li class="hover:bg-pink-300 w-[150px] text-center"><a href="./about.html">À propos</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="btn__container flex flex-col">
+        <button data-dialog="#menu-mobile" class="btn-close  font-bold">X</button>
+      </div>
+      
+    </div>
+
+  </header>
+
+  <main>
+    <div class="banner p-3">
+     
+        <div class="banner__content flex flex-col text-center items-center">
+          <h2  class="font-heading font-semibold p-3">Pour explorer le monde, c'est par ici!</h2>
+          <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, reiciendis. Pariatur vitae quo
+            tenetur expedita doloremque repudiandae esse consequatur necessitatibus recusandae quis perferendis aliquam
+            voluptatum nostrum, rem veniam sapiente neque!</span>
+          <button class="bg-slate-700 text-white p-1 rounded">Découvrir</button>
+        </div>
+
+        <picture class="">
+          <source media="(min-width: 768px)" srcset="./assets/images/kid2.jpg">
+          <img class="" src="./assets/images/kid1.jpg" alt="une image">
+        </picture>
+      
+    </div>
+
+              <!--!section avantages: 3 icones, 3 avantages, 3colonnes-->
+    <div class="avantages grid grid-cols-1 md:grid-cols-3 bg-teal-300 gap-3 place-items-center">
+
+      <div class="avantages flex flex-col p-3 border-t-pink-300 border-b-2 md:border-none">
+
+        <div class =" flex flex-row ">
+          <img src="./assets/images/icons/star.svg" alt="star">
+          <h2 class="font-heading font-semibold p-3">Avantage 1</h2>
+        </div>
+
+        <p class="text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis saepe totam esse consequatur dolores error
+          molestias, labore iure vel ipsa numquam voluptatibus, et ad rerum recusandae, delectus quis minus quasi?</p>
+
+      </div>
+
+      <div class="avantages flex flex-col p-3 border-t-pink-300 border-b-2 md:border-none ">
+        <div class="flex flex-row">
+          <img src="./assets/images/icons/star.svg" alt="star">
+          <h2 class="font-heading font-semibold p-3">Avantage 2</h2>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis saepe totam esse consequatur dolores error
+          molestias, labore iure vel ipsa numquam voluptatibus, et ad rerum recusandae, delectus quis minus quasi?</p>
+      </div>
+     
+      <div class="avantages flex flex-col p-3 border-t-pink-300 border-b-2 md:border-none ">
+        <div class="flex flex-row">
+          <img src="./assets/images/icons/star.svg" alt="star">
+          <h2 class="font-heading font-semibold p-3">Avantage 3</h2>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis saepe totam esse consequatur dolores error
+          molestias, labore iure vel ipsa numquam voluptatibus, et ad rerum recusandae, delectus quis minus quasi?</p>
+      </div>
+
+    </div>
+
+            <!--!section produits vedettes : 4 produits, 4 colonnes-->
+
+    <div class="flex flex-col items-center">
+      <h1 class="font-heading font-semibold p-3 text-center text-lg bg-pink-400 w-full">Nos produits vedettes</h1>
+
+      <div class="products-container-index grid grid-cols-1 md:grid-cols-4 p-3 gap-3"></div>
+    </div>
+  </main>
+
+          <!--! footer:logo, section contact, menu, section infolettre, section copyright, section follow us-->
+  <footer class="bg-teal-300 flex flex-col">
+                                    <!--!section logo-->
+    <div class="flex flex-col md:flex-row justify-evenly p-3 gap-3">
+      <div class="logo">
+        <img class="w-[36px] h-[36px] lg:w-[72px] md:h-[72px] " src="./assets/images/logo/marieland.png" alt="logo">
+      </div>
+
+
+                                    <!--!section contact-->
+      <div class="contact">
+        <h2 class="font-heading font-semibold p-3 text-center">Contact</h2>
+        <ul class="flex flex-col gap-3">
+          <li class="gap-3 flex flex-row  hover:bg-pink-200">
+            <img src="./assets/images/icons/location2.svg" alt="location">
+            <a href="#">Trouver une boutique</a>
+          </li>
+
+          <li class="gap-3 flex flex-row  hover:bg-pink-200">
+            <img src="./assets/images/icons/contact.svg" alt="contact">
+            <a href="./contact.html">Contactez-nous</a>
+          </li>
+
+          <li class="gap-3 flex flex-row  hover:bg-pink-200">
+            <img src="./assets/images/icons/plan.svg" alt="plan">
+            <a href="#">Plan du site</a>
+          </li>
+        </ul>
+      </div>
+                                    <!--!section infolettre-->
+      <div class="newsletter gap-3 flex flex-col">
+
+        <h2 class="font-heading font-semibold p-3 text-center">Infolettre</h2>
+
+        <p class="text-sm ">
+          Inscrivez-vous pour recevoir, en primeur, des offres exclusives, des promotions et des surprises.
+        </p>
+
+        <fieldset class="gap-2 flex flex-col ">
+          <label class="pt-3" for="firstName">Prénom</label>
+          <input class=" border-stone-700 border-2 border-solid max-w-[400px]" type="text" id="firstName">
+        </fieldset>
+
+        <fieldset class="gap-2 flex flex-col ">
+          <label class="pt-3" for="lastName">Nom</label>
+          <input class=" border-stone-700 border-2 border-solid  max-w-[400px]" type="text" id="lastName">
+        </fieldset>
+
+        <fieldset class="gap-2 flex flex-col">
+          <label class="pt-3" for="email">Courriel</label>
+          <input class=" border-stone-700 border-2 border-solid  max-w-[400px]" type="text" id="email" required>
+        </fieldset>
+
+        <form class="flex gap-3 content-center mt-3" action="./validation_form.html" method="get" target="_blank">
+          <button class="bg-slate-700 text-white p-1 rounded"  type="submit" value="submit">Soumettre</button>
+        </form>
+
+      </div>
+                        <!--!section menu-->
+      <div class="menu gap-3">
+        <h2 class="font-heading font-semibold text-center p-3"> Commandes</h2>
+        <ul class="gap-3 text-sm">
+          <li class="hover:bg-pink-300"><a href="#">Cartes-cadeaux</a></li>
+          <li class="hover:bg-pink-300"><a href="#">Commandes internationales</a></li>
+          <li class="hover:bg-pink-300"><a href="#">Conditions de vente</a></li>
+          <li class="hover:bg-pink-300"><a href="#">Liste-cadeaux</a></li>
+          <li class="hover:bg-pink-300"><a href="#">Livraison</a></li>
+          <li class="hover:bg-pink-300"><a href="#">Retours & échanges</a></li>
+          <li class="hover:bg-pink-300"><a href="#">Sécurité & confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+                       <!--!section copyright et follow us-->
+    <div class="flex flex-row justify-between bg-pink-400 p-3">
+
+      <div class="copyright text-xs content-center">
+        <span>Tous droits réservés &#169; 2024 </span>
+      </div>
+
+      <div class="follow_us flex gap-3">
+        <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/facebook.png" alt="facebook"></a>
+        <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/instagram (1).png"
+            alt="instagram"></a>
+        <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/twitter.png" alt="twitter"></a>
+        <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/youtube.png" alt="youtube"></a>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>

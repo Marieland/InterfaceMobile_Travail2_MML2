@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script type="module" src="./assets/js/main.js" defer></script>
+    <script type="module" src="./assets/js/dialog.js" defer></script>
+    <title>À propos</title>
+</head>
+<body>
+    <header class="bg-white">
+
+        <div class="banner bg-pink-400 flex flex-row place-content-center font-heading font-semibold p-3 md:text-lg">
+          <p>Livraison gratuite à partir de 75$ dans la région de Québec</p>
+        </div>
+
+        <div class="flex flex-row gap-3 justify-evenly bg-teal-300">
+    
+          <div class="header_logo p-3">
+            <img class="logo  w-[36px] h-[36px] lg:w-[72px] lg:h-[72px]" src="./assets/images/logo/marieland.png"
+              alt="Logo">
+          </div>
+    
+          <nav class="flex items-center">
+            <ul class="hidden md:flex flex-row gap-3 p-3 justify-evenly">
+              <li class=" hover:underline">
+                <a href="./index.html">Accueil</a>
+              </li>
+              <li class=" hover:underline">
+                <a href="./product.html">Produits</a>
+              </li>
+              <li class=" hover:underline">
+                <a href="./contact.html">Nous contacter</a>
+              </li>
+              <li class=" hover:underline">
+                <a href="./about.html">À propos</a>
+              </li>
+            </ul>
+          </nav>
+    
+          <div class="flex flex-row items-center justify-start">
+    
+            <button class="btn__menu p-3">
+              <img data-dialog="#menu-mobile" src="./assets/images/icons/menu.svg" alt="menu-mobile" class="md:hidden"></img>
+            </button>
+          </div>
+    
+          <div class="articles_container flex flex-row items-center  gap-3">
+            <div class="w-full flex flex-row gap-3">
+              <img src="./assets/images/icons/search.svg" alt="search">
+              <input class="search border border-black bg-slate-300" type="text">
+            </div>
+          </div>
+                    <!--! cart-->
+          <button>
+            <img class="items-end " src="./assets/images/icons/cart.svg" alt="cart">
+          </button>
+    
+          <div id="cart" class="dialog">
+            <div class="flex flex-col gap-3 w-[350px] bg-grey-400 justify-self-end">Test</div>
+    
+            <div class="cart_items"></div>
+            <div class="cart_total">$0.00</div>
+          </div>
+    
+        </div>
+                    <!--! mobile modal-->
+        <div id="menu-mobile"  class="dialog"  aria-role="dialog">
+
+          <div class="bg-slate-200 justify-center flex flex-row text-sm w-1/2">
+            <nav>
+              <ul class="justify-evenly gap-3 flex flex-col items-center ">
+                <li class=" hover:bg-pink-300 w-[150px] text-center"> <a href="./index.html">Accueil</a></li>
+                <li class="hover:bg-pink-300 w-[150px] text-center" ><a href="./product.html">Produits</a></li>
+                <li class="hover:bg-pink-300 w-[150px] text-center"><a href="./contact.html">Nous contacter</a></li>
+                <li class="hover:bg-pink-300 w-[150px] text-center"><a href="./about.html">À propos</a></li>
+              </ul>
+            </nav>
+          </div>
+    
+          <div class="btn__container flex flex-col">
+            <button data-dialog="#menu-mobile" class="btn-close  font-bold">X</button>
+          </div>
+          
+        </div>
+    </header>
+
+
+    <main class="grid grid-cols-2">
+        <div class="">
+            <img class="h-[400px]" src="./assets/images/kid3.jpg" alt="kids">
+        </div>
+
+        <div>
+            <div class="">
+                <h2 class="font-heading font-semibold text-center p-3 text-lg text-pink-400">À propos de nous</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptatum tempora excepturi corporis nemo et minima est placeat, reprehenderit recusandae aliquam modi provident obcaecati quos facilis, illo quaerat voluptatem ab.</p>
+            </div>
+
+            <div class="border-t-pink-400 border-y-2">
+                <h2 class="font-heading font-semibold text-center p-3">Mes sources</h2>
+                <p>Pour les images, j'ai principalement utilisé Pixabay et Freepik. Pour les icons, google font icon.</p>
+                <p>Pour les codes, les ressources habituelles ont été utilisées w3schook, mdn et principalement le contenu vu en cours. </p>
+            </div>
+        
+            <div class="border-t-pink-400 border-y-2">
+                <h2 class="font-heading font-semibold text-center p-3">Ce que j'ai retenu</h2>
+                <p>Comme tu peux le voir, j'ai manqué de temps pour terminé au niveau demandé. Par contre, j'ai trouvé l'utilisation de
+                    tailwind vraiment géniale et j'aimerais vraiment pouvoir consacré du temps à le découvrir encore plus. Du côté du
+                    javascript, j'ai pu faire fonctionner la recherche et mieux comprendre comment le tout s'exécute. Ce n'est pas
+                    parfait mais je suis contente de voir que si je pouvais y mettre plus de temps j'arriverais à un bon résultat.</p>
+            </div>
+    </main>
+
+    <footer class="bg-teal-300 flex flex-col">
+                        <!--!section logo-->
+        <div class="flex flex-col md:flex-row justify-evenly p-3 gap-3">
+            <div class="logo">
+                <img class="w-[36px] h-[36px] lg:w-[72px] md:h-[72px] " src="./assets/images/logo/marieland.png" alt="logo">
+            </div>
+
+
+                        <!--!section contact-->
+            <div class="contact">
+                <h2 class="font-heading font-semibold p-3 text-center">Contact</h2>
+                <ul class="flex flex-col gap-3">
+                    <li class="gap-3 flex flex-row  hover:bg-pink-200">
+                        <img src="./assets/images/icons/location2.svg" alt="location">
+                        <a href="#">Trouver une boutique</a>
+                    </li>
+
+                    <li class="gap-3 flex flex-row  hover:bg-pink-200">
+                        <img src="./assets/images/icons/contact.svg" alt="contact">
+                        <a href="./contact.html">Contactez-nous</a>
+                    </li>
+
+                    <li class="gap-3 flex flex-row  hover:bg-pink-200">
+                        <img src="./assets/images/icons/plan.svg" alt="plan">
+                        <a href="#">Plan du site</a>
+                    </li>
+                </ul>
+            </div>
+                        <!--!section infolettre-->
+            <div class="newsletter gap-3 flex flex-col">
+
+                <h2 class="font-heading font-semibold p-3 text-center">Infolettre</h2>
+
+                <p class="text-sm ">
+                    Inscrivez-vous pour recevoir, en primeur, des offres exclusives, des promotions et des surprises.
+                </p>
+
+                <fieldset class="gap-2 flex flex-col ">
+                    <label class="pt-3" for="firstName">Prénom</label>
+                    <input class=" border-stone-700 border-2 border-solid max-w-[400px]" type="text" id="firstName">
+                </fieldset>
+
+                <fieldset class="gap-2 flex flex-col ">
+                    <label class="pt-3" for="lastName">Nom</label>
+                    <input class=" border-stone-700 border-2 border-solid  max-w-[400px]" type="text" id="lastName">
+                </fieldset>
+
+                <fieldset class="gap-2 flex flex-col">
+                    <label class="pt-3" for="email">Courriel</label>
+                    <input class=" border-stone-700 border-2 border-solid  max-w-[400px]" type="text" id="email" required>
+                </fieldset>
+
+                <form class="flex gap-3 content-center mt-3" action="./validation_form.html" method="get" target="_blank">
+                    <button class="bg-slate-700 text-white p-1 rounded"  type="submit" value="submit">Soumettre</button>
+                </form>
+
+            </div>
+                        <!--!section menu-->
+            <div class="menu gap-3">
+                <h2 class="font-heading font-semibold text-center p-3"> Commandes</h2>
+                <ul class="gap-3 text-sm">
+                    <li class="hover:bg-pink-300"><a href="#">Cartes-cadeaux</a></li>
+                    <li class="hover:bg-pink-300"><a href="#">Commandes internationales</a></li>
+                    <li class="hover:bg-pink-300"><a href="#">Conditions de vente</a></li>
+                    <li class="hover:bg-pink-300"><a href="#">Liste-cadeaux</a></li>
+                    <li class="hover:bg-pink-300"><a href="#">Livraison</a></li>
+                    <li class="hover:bg-pink-300"><a href="#">Retours & échanges</a></li>
+                    <li class="hover:bg-pink-300"><a href="#">Sécurité & confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+                        <!--!section copyright et follow us-->
+        <div class="flex flex-row justify-between bg-pink-400 p-3">
+        
+            <div class="copyright text-xs content-center">
+                <span>Tous droits réservés &#169; 2024 </span>
+            </div>
+        
+            <div class="follow_us flex gap-3">
+                <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/facebook.png" alt="facebook"></a>
+                <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/instagram (1).png"alt="instagram"></a>
+                <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/twitter.png" alt="twitter"></a>
+                <a href="#"><img class="w-[24px] h-[24px]" src="./assets/images/socialmedia/youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
