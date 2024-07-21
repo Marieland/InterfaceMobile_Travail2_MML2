@@ -1,7 +1,7 @@
 import '../css/styles.css';
 import products from './products';
 /* import "./dialog"; */
-import Product from './Product';
+// code inutile -0.5
 import "./search";
 
 const productsContainerProduits = document.querySelector('.products-container-produits');
